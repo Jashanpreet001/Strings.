@@ -1,0 +1,57 @@
+//
+//  main.cpp
+//  WAP to count the number of words in a strings.
+//
+//  Created by JASHANPREET SINGH on 31/03/20.
+//  Copyright © 2020 JASHANPREET SINGH. All rights reserved.
+//
+
+#include <iostream>
+
+/*Incorrect Code*/
+
+/*int main(){
+    char str[100];
+    int count,i;
+    printf("Enter a string :");
+    gets(str);
+    i=0;
+    count=0;
+    while(str[i] !='\0')
+    {
+        if(str[i]==' ')
+        {
+            count++;
+        }
+        i++;
+    }
+    count=count+1;
+    printf("Number of words = %d", count);
+           
+        return 0;
+    
+}
+*/
+
+int main(){
+    char str[100];
+    int count,i;
+    printf("Enter a string :");
+    gets(str);
+    i=0;
+    count=0;
+    while(str[i] !='\0')
+    {
+        if(str[i]==' ' && str[i+1]!=' ')
+        {
+            count++;
+        }
+        i++;
+    }
+    count=count+1;
+    printf("Number of words = %d\n", count);
+           
+        return 0;
+    
+}
+
